@@ -25,5 +25,17 @@ const db = getFirestore(app);
 
 const querySnapshot = await getDocs(collection(db, "post"));
 querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
+  let product = doc.data();
+  document.getElementById("list-blog").innerHTML += `<div class="con_dao_non">
+                                        <img src="https://photo-baomoi.bmcdn.me/w300_r3x2/2023_09_21_23_46994130/a83061cebb8352dd0b92.jpg.webp"
+                                            alt="Bà Nguyễn Phương Hằng nói lời sau cùng" class="bm_CE">
+
+                                        <div>
+                                            <h3>
+                                                <a
+                                                    href="https://vietnamnet.vn/ba-nguyen-phuong-hang-noi-loi-sau-cung-2192729.html">Bà
+                                                    Nguyễn Phương Hằng nói lời sau cùng</a>
+                                            </h3>
+                                        </div>
+                                    </div>`;
 });
