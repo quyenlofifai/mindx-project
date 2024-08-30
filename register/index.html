@@ -30,21 +30,31 @@
         border: 1px solid #ccc;
         border-radius: 4px;
       }
-      .form-group input[type="submit"] {
-        background-color: #4caf50;
-        color: rgb(255, 255, 255);
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #45a049;
+        color: #fff;
         border: none;
+        border-radius: 10%;
         cursor: pointer;
       }
-      .form-group input[type="submit"]:hover {
+      .form-group-1 {
         background-color: #45a049;
+        width: 370px;
+        padding: 5px;
+      }
+      .form-group-1 a {
+        text-decoration: none;
+        color: #fff;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h2>Đăng ký</h2>
-      <form action="process.php" method="post">
+      <form>
         <div class="form-group">
           <label for="username">Tên người dùng:</label>
           <input type="text" id="username" name="username" value="" required />
@@ -57,14 +67,8 @@
           <label for="password">Mật khẩu:</label>
           <input type="password" id="password" name="password" required />
         </div>
-        <div class="form-group">
-          <input
-            type="submit"
-            id="register"
-            value="Đăng ký"
-            onclick="location.href = '/';"
-          />
-        </div>
+
+        <button href="/login/index.html">Đăng ký</button>
       </form>
     </div>
     <script src="script.js" type="module"></script>
